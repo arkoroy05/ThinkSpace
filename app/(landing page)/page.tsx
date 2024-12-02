@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Heading from "./_components/Heading";
 import Heroes from "./_components/Heroes";
+import Footer from "./_components/Footer";
+
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
         <Heading></Heading>
         <Heroes></Heroes>
       </div>
+      <Footer></Footer>
      
     </div>
   );
