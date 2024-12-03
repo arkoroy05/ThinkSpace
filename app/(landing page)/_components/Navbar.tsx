@@ -16,7 +16,7 @@ export function Navbar() {
   const {isAuthenticated,isLoading}=useConvexAuth()
 
   return (
-    <nav className="flex items-center justify-between p-4 bg-background">
+    <nav className="flex items-center justify-between p-4 bg-transparent">
   <div className="text-2xl font-bold text-primary">ThinkSpace</div>
   
   <div className="flex items-center gap-4 ml-auto">
