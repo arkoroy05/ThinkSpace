@@ -39,11 +39,6 @@ export function Navbar() {
     )}
     {isAuthenticated && !isLoading &&(
       <>
-        <Button variant="ghost" size="sm">
-          <Link href="/documents">
-          Enter ThinkSpace
-          </Link>
-        </Button>
         <UserButton afterSignOutUrl="/"></UserButton>
       </>
     )}
