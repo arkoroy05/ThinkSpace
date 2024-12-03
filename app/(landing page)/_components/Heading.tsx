@@ -5,10 +5,11 @@ import { ArrowBigRight } from 'lucide-react'
 import { useConvexAuth } from "convex/react"
 import Link from 'next/link'
 import React from 'react'
-import { SignInButton } from '@clerk/clerk-react'
+import { SignInButton, useUser } from '@clerk/clerk-react'
 
 export default function Heading() {
   const {isAuthenticated,isLoading}=useConvexAuth()
+  const {user}=useUser()
   return (
     <div className='max-w-3xl space-y-4'>
       <h1 className='text-3xl sm:text-5xl md:text-6xl font-bold'>
@@ -19,15 +20,15 @@ export default function Heading() {
       </h3>
       {!isLoading && !isAuthenticated && (
         <SignInButton>
-          <Button>
+          <Button className='mt-10'>
             Join ThinkSpace
           </Button>
         </SignInButton>
       ) }
       {!isLoading && isAuthenticated && (
         <Link href="/documents">
-          <Button>
-           Start Exploring
+          <Button className='mt-10'>
+           Lets Get Started {user?.firstName}
           </Button>
         </Link>
 
